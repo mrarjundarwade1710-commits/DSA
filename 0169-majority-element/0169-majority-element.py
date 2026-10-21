@@ -4,10 +4,7 @@ class Solution:
         co=None
         for i in nums:
             if c==0:
-                co=i
-            
+                co=i   
             c+=(1 if co==i else -1)
         return co
-
-        return candidate
         

@@ -3,24 +3,19 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        c = m   # count of valid elements in nums1
+        i=m-1
+        j=n-1
+        l=len(nums1)-1
 
-        # loop through nums2 and insert into nums1
-        for j in range(n):
-            val = nums2[j]
-            inserted = False
-
-            # try to insert val into the right place
-            for i in range(c):
-                if nums1[i] > val:
-                    # shift elements to the right
-                    nums1[i+1:c+1] = nums1[i:c]
-                    nums1[i] = val
-                    c += 1
-                    inserted = True
-                    break
-
-            # if not inserted, append at the end
-            if not inserted:
-                nums1[c] = val
-                c += 1
+        while(j>=0):
+            if i>=0 and nums1[i]>nums2[j]:
+                nums1[l]=nums1[i]
+                
+                i-=1
+            else:
+                nums1[l]=nums2[j]
+               
+                j-=1
+            l-=1
+             
+       

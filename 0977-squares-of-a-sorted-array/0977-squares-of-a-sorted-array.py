@@ -18,21 +18,36 @@ class Solution:
         j=len(b)-1
         k=0
         l=0
-        res=[]
+        n=len(nums)
+        res=[0] * n
+        p=0
         while(k<=i and l<=j):
             if a[k]<=b[l]:
-                res.append(a[k])
+                res[p]=a[k]
                 k+=1
+                p+=1
             else:
-                res.append(b[l])
+                res[p]=(b[l])
                 l+=1
+                p+=1
         while(k<=i):
-            res.append(a[k])
+            res[p]=(a[k])
             k+=1
+            p+=1
         while(l<=j):
-            res.append(b[l])
+            res[p]=(b[l])
             l+=1
+            p+=1
         return res
+        # n=len(nums)-1
+        # l=0
+        # r=n
+        # p=n
+        # res=[]
+        # while(l<=r):
+        #     if abs(nums[l]) > abs(nums(r)):
+        #         res
+
         
 
         

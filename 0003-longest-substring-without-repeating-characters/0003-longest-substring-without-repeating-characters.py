@@ -6,7 +6,6 @@ class Solution:
             return 0
         for high in range(0,n):
             fr[s[high]]=fr.get(s[high],0)+1
-            k=high+low-1
             while(fr[s[high]]>1):
                 fr[s[low]]-=1
                 if fr[s[low]]==0:
